@@ -1,0 +1,58 @@
+﻿@model CVApp.Models.CVModel
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">CV Oluşturucu</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Index" method="post">
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label">Ad Soyad</label>
+                            <input asp-for="FullName" class="form-control" placeholder="Ad Soyad" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">E-posta</label>
+                            <input asp-for="Email" class="form-control" placeholder="ornek@email.com" type="email" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Phone" class="form-label">Telefon</label>
+                            <input asp-for="Phone" class="form-control" placeholder="5XX XXX XXXX" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Summary" class="form-label">Özet</label>
+                            <textarea asp-for="Summary" class="form-control" rows="4" placeholder="Kendinizi tanıtın..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Yetenekler</label>
+                            <input name="Skills" class="form-control" placeholder="Örnek: HTML, CSS, JavaScript" />
+                            <div class="form-text">Yeteneklerinizi virgülle ayırarak yazın</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Eğitim</label>
+                            <input name="Education" class="form-control" placeholder="Örnek: Üniversite, Bölüm, Yıl" />
+                            <div class="form-text">Eğitim bilgilerinizi virgülle ayırarak yazın</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Deneyim</label>
+                            <input name="Experience" class="form-control" placeholder="Örnek: Şirket, Pozisyon, Yıl" />
+                            <div class="form-text">İş deneyimlerinizi virgülle ayırarak yazın</div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">CV Oluştur</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
